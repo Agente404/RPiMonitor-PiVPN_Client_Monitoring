@@ -13,8 +13,7 @@ function UpdateAddon () {
     textToDisplay = "";
     markerString = "Since";
     textData = data.vpn_clients;
-    textArray = textData.trim().slice(textData.indexOf(markerString) + (markerString.length + 6)).replace(/[^ -~]+/g, ";").replace(",",";").split(";");
-    textArray = textArray.filter(function (el) {
+    textArray = (textData.trim().slice(textData.indexOf(markerString) + (markerString.length + 6)).replace(/[^ -~]+/g, ";").replace(",",";").split(";")).filter(function (el) {
        return el != "";
     });
     next = 0;
